@@ -1,0 +1,59 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    color: #E5E7EB;
+}
+h1, h2, h3, h4 {
+    font-family: 'Source Code Pro', monospace;
+}
+#gameOfLifeCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.7;
+}
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.card-bg {
+    background-color: rgba(17, 24, 39, 0.8);
+}
+.project-card, .github-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #374151;
+}
+.project-card:hover, .github-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+}
+.skill-icon:hover {
+    transform: scale(1.1);
+    color: #8B5CF6;
+}
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8B5CF6;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
